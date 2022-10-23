@@ -54,6 +54,14 @@ function iniciarJogo() {
     if (snake[0].y < 0 && direction == "up") snake[0].y = 16 * box;
 
 
+    for(i = 1; i < snake.length; i++){
+        if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
+            clearInterval(jogo);
+            alert('Se fudeu!');
+        }
+    }
+
+
     criarBG();
     criarCobrinha();
     drawFood();
@@ -90,5 +98,7 @@ function iniciarJogo() {
 }
 
 //START//
-let jogo = setInterval(iniciarJogo, 80);
+alert('Pressione ENTER para começar!');
+let jogo = setInterval(iniciarJogo, 90);
+
 
