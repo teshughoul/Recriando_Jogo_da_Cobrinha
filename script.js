@@ -57,7 +57,7 @@ function iniciarJogo() {
     for(i = 1; i < snake.length; i++){
         if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
             clearInterval(jogo);
-            alert('Se fudeu!');
+            alert('FIM DE JOGO! (APERTE F5 PARA RECOMEÇAR.)');
         }
     }
 
@@ -99,6 +99,6 @@ function iniciarJogo() {
 
 //START//
 alert('Pressione ENTER para começar!');
-let jogo = setInterval(iniciarJogo, 90);
+let jogo = setInterval(iniciarJogo, 100);
 
 
